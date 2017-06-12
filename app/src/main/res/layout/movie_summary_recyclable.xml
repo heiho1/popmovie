@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/movie_summary_view"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    card_view:cardCornerRadius="4dp"
+    android:layout_margin="5dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--poster image, title, synopsis, duration and rating-->
+        <ImageView
+            android:id="@+id/summary_poster_image"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:src="@drawable/ic_movie_black_24dp"/>
+
+        <TextView
+            android:id="@+id/summary_title"
+            android:layout_width="200dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/summary_poster_image"
+            android:text="Title"
+            android:gravity="center_vertical"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:id="@+id/rating_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@+id/summary_title"
+            android:gravity="center_vertical"
+            android:text="Rating"
+            />
+        <TextView
+            android:id="@+id/summary_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="1.5"
+            android:textSize="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="14dp"
+            android:layout_alignBaseline="@+id/rating_lbl"
+            android:layout_below="@+id/summary_title"
+            android:layout_toRightOf="@id/rating_lbl"
+            />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
