@@ -2,7 +2,6 @@ package com.example.heiho1.popmovies;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -18,9 +17,6 @@ import com.example.heiho1.popmovies.api.MovieDb;
 import com.example.heiho1.popmovies.model.MovieDetailResponse;
 import com.example.heiho1.popmovies.service.MovieDetailsReceiver;
 import com.example.heiho1.popmovies.service.MovieDetailsService;
-import com.example.heiho1.popmovies.service.PopularMoviesReceiver;
-import com.example.heiho1.popmovies.service.PopularMoviesService;
-import com.example.heiho1.popmovies.view.recycler.MovieDetailHolder;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

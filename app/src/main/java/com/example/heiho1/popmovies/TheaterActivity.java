@@ -27,5 +27,6 @@ public class TheaterActivity extends Activity {
         HttpProxyCacheServer proxy = PopMoviesApplication.getProxy(getApplicationContext());
         String url = proxy.getProxyUrl(movieUrl);
         videoView.setVideoPath(url);
+        videoView.start();
     }
 }

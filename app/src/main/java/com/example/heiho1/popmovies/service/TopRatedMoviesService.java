@@ -36,16 +36,22 @@ public class TopRatedMoviesService extends CachingService<MovieListResponseCache
 
     @Override
     protected void onHandleIntent(@Nullable Intent intent) {
-        try {
-            MovieListResponse rated = API.listTopRated(Keys.keyFor(Keys.Types.the_movie_db),
-                    intent.getIntExtra("page", 1)).execute().body();
-            intent.putExtra("topRated", (Parcelable)rated);
-            ResultReceiver receiver = intent.getParcelableExtra("receiver");
-            Bundle b = new Bundle();
-            b.putParcelable("topRated", rated);
-            receiver.send(0, b);
-        } catch (IOException e) {
-            Log.e(TAG, "Failure getting popular movies", e);
+        int page = intent.getIntExtra("page", 1);
+        MovieListResponse topRated = null;
+
+        if (cache.get(page) != null) {
+            topRated = cache.get(page);
+        } else {
+            try {
+                topRated = API.listTopRated(Keys.keyFor(Keys.Types.the_movie_db), page).execute().body();
+                cache.put(topRated.getPage(), topRated);
+            } catch (IOException e) {
+                Log.e(TAG, "Failure getting top rated movies", e);
+            }
         }
+        ResultReceiver receiver = intent.getParcelableExtra("receiver");
+        Bundle b = new Bundle();
+        b.putParcelable("topRated", topRated);
+        receiver.send(0, b);
     }
 }

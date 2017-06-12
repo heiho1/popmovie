@@ -39,16 +39,22 @@ public class PopularMoviesService extends CachingService<MovieListResponseCache>
 
     @Override
     protected void onHandleIntent(@Nullable Intent intent) {
-        try {
-            MovieListResponse popular = API.listPopular(Keys.keyFor(Keys.Types.the_movie_db),
-                    intent.getIntExtra("page", 1)).execute().body();
-            ResultReceiver receiver = intent.getParcelableExtra("receiver");
-            Bundle b = new Bundle();
-            b.putParcelable("popular", popular);
-            receiver.send(0, b);
-        } catch (IOException e) {
-            Log.e(TAG, "Failure getting popular movies", e);
-//            Snackbar.make(popularMovies, "Sadly the popular movies are not available.  Please try again.", Snackbar.LENGTH_SHORT);
+        int page = intent.getIntExtra("page", 1);
+        MovieListResponse popular = null;
+
+        if (cache.get(page) != null) {
+            popular = cache.get(page);
+        } else {
+            try {
+                popular = API.listPopular(Keys.keyFor(Keys.Types.the_movie_db), page).execute().body();
+                cache.put(popular.getPage(), popular);
+            } catch (IOException e) {
+                Log.e(TAG, "Failure getting popular movies", e);
+            }
         }
+        ResultReceiver receiver = intent.getParcelableExtra("receiver");
+        Bundle b = new Bundle();
+        b.putParcelable("popular", popular);
+        receiver.send(0, b);
     }
 }
