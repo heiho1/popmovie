@@ -1,31 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.mobidevelop.spl.widget.SplitPaneLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:spl="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:clickable="false"
     android:focusable="false"
     android:foreground="?android:attr/selectableItemBackground"
-    spl:orientation="vertical"
-    spl:splitterSize="12dp"
-    spl:splitterPosition="50%"
-    spl:splitterBackground="@color/colorPrimary"
     >
+    <TextView android:id="@+id/popular_list_lbl"
+        android:text="Popular Movies"
+        android:background="@color/colorPrimaryDark"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_height="25dp"
+        android:layout_width="match_parent"/>
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/popular_movies_recycler"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/popular_list_lbl"
         />
+
+    <TextView android:id="@+id/top_rated_list_lbl"
+        android:text="Top Rated Movies"
+        android:background="@color/colorPrimaryDark"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_height="25dp"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/popular_movies_recycler"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/top_rated_movies_recycler"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/top_rated_list_lbl"
         />
 
-</com.mobidevelop.spl.widget.SplitPaneLayout>
+    <TextView android:id="@+id/instructions"
+        android:text="Scroll to a movie and click on it to see the details!"
+        android:background="@color/colorPrimaryDark"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/top_rated_movies_recycler"/>
+</RelativeLayout>
 
 <!--<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
     <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
