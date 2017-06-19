@@ -28,11 +28,19 @@ public class VerticalScrollListener extends RecyclerView.OnScrollListener {
         }
     }
 
-    public void onScrolledUp() {}
+    public void onScrolledUp() {
+        ;
+    }
 
-    public void onScrolledDown() {}
+    public void onScrolledDown() {
+        ;
+    }
 
-    public void onScrolledToTop() {}
+    public void onScrolledToTop() {
+        ;
+    }
 
-    public void onScrolledToBottom() {}
+    public void onScrolledToBottom() {
+        ;
+    }
 }
