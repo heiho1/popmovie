@@ -31,11 +31,6 @@ public class MovieDetailActivity extends AppCompatActivity
                         Button.OnClickListener {
     private MovieDb.Images imagesApi;
 
-    /**
-     * Identifier of the movie to display
-     */
-    private Integer movieId;
-
     @BindView(R.id.detail_poster_image)
     ImageView poster;
 

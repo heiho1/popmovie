@@ -1,7 +1,6 @@
 package com.example.heiho1.popmovies.util;
 
 import android.util.Log;
-import android.util.LruCache;
 
 import com.example.heiho1.popmovies.PopMoviesApplication;
 import com.example.heiho1.popmovies.api.Keys;

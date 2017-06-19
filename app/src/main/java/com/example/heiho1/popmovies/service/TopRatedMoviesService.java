@@ -1,9 +1,7 @@
 package com.example.heiho1.popmovies.service;
 
-import android.app.IntentService;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.os.ResultReceiver;
 import android.support.annotation.Nullable;
 import android.util.Log;

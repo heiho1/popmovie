@@ -5,8 +5,6 @@ import android.content.Context;
 
 import com.danikula.videocache.HttpProxyCacheServer;
 import com.example.heiho1.popmovies.api.MovieDb;
-import com.example.heiho1.popmovies.model.MovieListResponse;
-import com.example.heiho1.popmovies.service.PopularMoviesReceiver;
 import com.example.heiho1.popmovies.util.MovieDetailResponseCache;
 import com.example.heiho1.popmovies.util.MovieListResponseCache;
 

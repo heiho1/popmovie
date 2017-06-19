@@ -17,7 +17,6 @@ import java.util.List;
  * a RecyclerView consumer
  */
 public class MovieSummaryResponseAdapter extends RecyclerView.Adapter<MovieSummaryHolder> {
-    private final MovieDb api = PopMoviesApplication.api();
     private List<MovieSummary> summaries;
 
     public MovieSummaryResponseAdapter(List<MovieSummary> summaries) {

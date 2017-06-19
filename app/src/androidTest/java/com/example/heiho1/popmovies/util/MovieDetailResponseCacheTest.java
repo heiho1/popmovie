@@ -3,13 +3,10 @@ package com.example.heiho1.popmovies.util;
 import com.example.heiho1.popmovies.api.Keys;
 import com.example.heiho1.popmovies.api.MovieDb;
 import com.example.heiho1.popmovies.model.MovieDetailResponse;
-import com.example.heiho1.popmovies.model.MovieListResponse;
 
 import org.junit.Test;
 
 import java.io.IOException;
-
-import retrofit2.Response;
 
 import static com.example.heiho1.popmovies.PopMoviesApplication.retrofit;
 import static junit.framework.Assert.assertNotNull;

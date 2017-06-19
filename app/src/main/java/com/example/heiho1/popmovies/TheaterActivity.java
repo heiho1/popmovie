@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.widget.VideoView;
 
 import com.danikula.videocache.HttpProxyCacheServer;
-import com.example.heiho1.popmovies.api.MovieDb;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

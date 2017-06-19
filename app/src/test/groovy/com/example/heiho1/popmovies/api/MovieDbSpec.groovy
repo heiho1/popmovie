@@ -5,10 +5,9 @@ import com.example.heiho1.popmovies.model.MovieListResponse
 import retrofit2.Call
 import retrofit2.Response
 import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import spock.lang.Shared
 import spock.lang.Specification
-import retrofit2.converter.gson.GsonConverterFactory
-
 
 /**
  * Specifies the expected behavior of themoviedb.org's REST API

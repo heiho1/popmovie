@@ -1,12 +1,9 @@
 package com.example.heiho1.popmovies.service;
 
-import android.app.IntentService;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.os.ResultReceiver;
 import android.support.annotation.Nullable;
-import android.support.design.widget.Snackbar;
 import android.util.Log;
 
 import com.example.heiho1.popmovies.PopMoviesApplication;
@@ -14,7 +11,6 @@ import com.example.heiho1.popmovies.api.Keys;
 import com.example.heiho1.popmovies.api.MovieDb;
 import com.example.heiho1.popmovies.model.MovieListResponse;
 import com.example.heiho1.popmovies.util.MovieListResponseCache;
-import com.example.heiho1.popmovies.view.recycler.MovieSummaryResponseAdapter;
 
 import java.io.IOException;
 

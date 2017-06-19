@@ -7,8 +7,8 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 
-import com.example.heiho1.popmovies.api.MovieDb;
 import com.example.heiho1.popmovies.model.MovieListResponse;
 import com.example.heiho1.popmovies.service.PopularMoviesReceiver;
 import com.example.heiho1.popmovies.service.PopularMoviesService;
@@ -24,7 +24,6 @@ public class MoviesListActivity extends AppCompatActivity
         implements PopularMoviesReceiver.Listener, TopRatedMoviesReceiver.Listener {
     private static final String TAG = MoviesListActivity.class.getSimpleName();
 
-    private MovieDb api = PopMoviesApplication.api();
     /**
      * Start the activity at the first data page
      */
@@ -96,6 +95,7 @@ public class MoviesListActivity extends AppCompatActivity
         });
         startService(createPopularMoviesIntent(1));
         startService(createTopRatedMoviesIntent(1));
+        Log.d(TAG, "onCreate: finished");
     }
 
     private Intent createPopularMoviesIntent(int targetPage) {
