@@ -1,4 +1,5 @@
-# popmovie
+# popmovie 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5e118b6c16a143448563735b0810d374)](https://www.codacy.com/app/heiho1/popmovie?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=heiho1/popmovie&amp;utm_campaign=Badge_Grade)
 A simple android app integrating with themoviedb.org using retrofit and butterknife while demonstrating caching of all data, images and video and unit/integration testing of major  pieces.
 
 # Installation
